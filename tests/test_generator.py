@@ -39,7 +39,9 @@ class PydanticGeneratorTests(FactoryTestCase):
 
     def test_prohibited_optional_code_field_generation(self):
         runner = CliRunner()
-        schema = Path(__file__).parent.joinpath("fixtures/schemas/xsd/xjustiz_0010_cl_allgemein_3_6.xsd")
+        schema = Path(__file__).parent.joinpath(
+            "fixtures/schemas/xsd/xjustiz_0010_cl_allgemein_3_6.xsd"
+        )
         os.chdir(Path(__file__).parent.parent)
 
         result = runner.invoke(
